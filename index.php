@@ -10,10 +10,6 @@ $DB = new DBmanager();
 
 $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
 
-// print_r($user);
-
-// echo "PHPPPPP";
-
 ?>
 
 
@@ -91,11 +87,7 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
       <div class="p-2 mt-2 border border-black rounded bg-light message scroll" id="scroll">
         <?php
 
-        //$data = !isset($data) ? "" : $data;
-
-
         $DB->select("select * from chat", "");
-        //  $DB->PDOlib("select", "chat", ['user', 'message'], '', '', '', '');
 
         $data = $DB->showData();
 
@@ -244,11 +236,6 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
                 updateScroll();
 
               }
-              // 
-              // $("#scroll").animate({
-              //   scrollTop: $('#div1')[0].scrollHeight - $('#scroll')[0].clientHeight
-              // }, 1000);
-
             });
         }
       }
@@ -275,9 +262,6 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
               if (data == "true") {
                 window.location.reload(true);
               }
-              //$("#basicLayout").load(location.href+" #basicLayout>*","");
-              //updateScroll();
-
             });
         } else {
           alert("Please enter all fields!");
@@ -304,9 +288,6 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
             },
             function(data, status) {
               alert("Data: " + data + "\nStatus: " + status);
-              //window.location.reload(true);
-              //$("#scroll").load(location.href+" #scroll>*","");
-
             });
         } else {
           alert("Please enter all fields!");
@@ -321,28 +302,22 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
     var updateData = '<?php echo count($data); ?>';
 
     setInterval(function() {
-      //alert("Hello");
-      //var message = $("textarea").val();
+
       $.post("function.php", {
           reload: "reload"
         },
         function(chatData, status) {
           //alert("Data: " + data + "\nStatus: " + status);
           if (updateData != chatData) {
-            // alert("Data: " + data + "\nStatus: " + status);
             $("#scroll").load(location.href + " #scroll>*", "");
-            //window.location.reload(true);
             $("#scroll").scrollTop($("#scroll").scrollTop() + 75);
 
             updateData = chatData;
 
-            //updateScroll();
           }
         });
     }, 1000);
   </script>
-
-
 
 
   <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>

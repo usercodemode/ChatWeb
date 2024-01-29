@@ -41,7 +41,7 @@ if (!empty($_POST['account']) && $_POST['account'] == "register" && !empty($_POS
   $saltPassword = "abcd";
 
   if ($DB->insert("insert into account(email, user, password, saltPassword) values(:email, :user, :password, :saltPassword)", [':email' => $email, ':user' => $username,':password' =>  $password, ':saltPassword' => md5($saltPassword)])) {
-    echo "Account created successfully!";
+    echo "Account c1reated successfully!";
   } else {
     echo "Account creation unsuccessfull!";
   }
