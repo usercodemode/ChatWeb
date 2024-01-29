@@ -256,7 +256,7 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
               password: password
             },
             function(data, status) {
-              alert("Data: " + data + "\nStatus: " + status);
+              alert("Data: " + data);
               //$("#username").val(username);
               if (data == "true") {
                 window.location.reload(true);
@@ -286,7 +286,7 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
               password: password
             },
             function(data, status) {
-              alert("Data: " + data + "\nStatus: " + status);
+              alert("Data: " + data);
             });
         } else {
           alert("Please enter all fields!");
