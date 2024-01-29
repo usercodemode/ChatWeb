@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 
 session_start();
@@ -12,7 +11,7 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
 
 ?>
 
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -156,7 +155,7 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
               </div>
               <div class="mb-3 col-sm-6">
                 <label for="loginPassword" class="col-form-label">Password:</label>
-                <input type="text" class="form-control" id="loginPassword" placeholder="Password">
+                <input type="password" class="form-control" id="loginPassword" placeholder="Password">
               </div>
               <button class="btn btn-primary fw-bold" id="loginUser">SIGN IN</button>
             </div>
@@ -189,7 +188,7 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
               </div>
               <div class="mb-3 col-sm-6">
                 <label for="newPassword" class="col-form-label">Password:</label>
-                <input type="text" class="form-control" id="newPassword" placeholder="Password">
+                <input type="password" class="form-control" id="newPassword" placeholder="Password">
               </div>
               <button class="btn btn-primary fw-bold" id="registerUser">SIGN UP</button>
             </div>
