@@ -67,6 +67,8 @@ if (!empty($_POST['reload']) && $_POST['reload'] == "reload"){
   $DB->select("select * from chat", "");
 
   $data = $DB->showData();
+  echo count($data);
+
 }
 
 

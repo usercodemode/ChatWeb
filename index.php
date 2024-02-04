@@ -111,7 +111,7 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
 <span class="d-inline">
 <img class="my-1 img-thumbnail rounded-circle" src="/img/coding.png" alt="" width="45" height="45" align="right"/>
 </span>  
-<div class="p-2 m-1 text-white rounded shadow bg-primary d-inline-block float-end font-jost">
+<div class="p-2 m-1 text-white rounded shadow bg-primary d-inline-block float-end font-bold  font-jost">
  
     ' . htmlspecialchars(($data[$i]["message"])) . '
 
@@ -243,6 +243,7 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
 
   <!-- Login & Register -->
   <script>
+    
     $(document).ready(function() {
 
       $("#loginUser").click(function() {
@@ -298,7 +299,8 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
 
   <!-- Reload -->
   <script>
-    var updateData = '<?php echo count($data); ?>';
+    
+    var updateData = '<?php count($data) ?>';
 
     setInterval(function() {
 
@@ -306,7 +308,7 @@ $user = !empty($_SESSION['user']) ? $_SESSION['user'] : "";
           reload: "reload"
         },
         function(chatData, status) {
-          //alert("Data: " + data + "\nStatus: " + status);
+          //alert("Data: " + chatData + "\nStatus: " + status);
           if (updateData != chatData) {
             $("#scroll").load(location.href + " #scroll>*", "");
             $("#scroll").scrollTop($("#scroll").scrollTop() + 75);
