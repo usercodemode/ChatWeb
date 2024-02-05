@@ -75,26 +75,4 @@ class DBmanager
 
 $db = new DBmanager();
 
-//     // select
-//     $query = "select * from chat where id=:id";
-//     $data = $db->select($query, [":id" => 9]);
-//     print_r($data);
-
-    // update
-    // $data = $db->update("update chat set message=:message where id=:id", [':message' => 'hello txt', ":id" => 9]);
-    // var_dump($data);
-
-
-// $query = "INSERT INTO users (name, email) VALUES (:name, :email)";
-
-//$params = [':name' => $name, ':email' => $email];
-//$last_id = $db->insert($query, $params);
-
-
-
-
-// if ($last_id) {
-//         echo "Record inserted successfully with ID: $last_id";
-//     } else {
-//         echo "Error inserting record";
-//     }
+?>
