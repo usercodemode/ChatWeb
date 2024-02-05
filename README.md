@@ -1,4 +1,4 @@
-<h1>CHATWEB</h1>
+<h1><font color="blue">CHATWEB</font></h1>
 
 ![coding](https://github.com/usercodemode/ChatWeb/assets/147582140/0f0415ff-9534-41b2-ac16-9a1bf8d5dd0c)
 
