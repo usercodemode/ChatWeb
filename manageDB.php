@@ -2,7 +2,7 @@
 class DBmanager
 {
     private $host = '127.0.0.1';
-    private $dbname = 'chatDB';
+    private $dbname = 'BrandDB';
     private $user = 'root';
     private $pass = 'root123';
 
@@ -73,6 +73,5 @@ class DBmanager
     }
 }
 
-$db = new DBmanager();
 
 ?>
