@@ -49,7 +49,7 @@ while ($key != 1) {
         primary key (`id`))");
     }
 
-    echo "If you didn't recieve any error then check your database.";
+    echo "If you didn't recieved any error then check your database.";
 
     $key = 1;
 }
